@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="theme-wrapper">
+            <label class="checkbox-container">
+                <input type="checkbox" id="switch-mode">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        
+        <div class="card-wrapper">
+            <div class="card-top">
+                <h1 class="card-title">Metric/Imperial Unit Conversion</h1>
+                <input type="text" id="user-input">
+                <button id="convert-btn">Convert</button>
+            </div>
+            <div class="card-bottom">
+                <div class="units-cont">
+                    <h3 class="units-title">Length (Meter/Feet)</h3>
+                    <p id="length-p" class="units-p"></p>
+                </div>
+                <div class="units-cont">
+                    <h3 class="units-title">Volume (Liters/Gallons)</h3>
+                    <p id="volume-p" class="units-p"></p>
+                </div>
+                <div class="units-cont">
+                    <h3 class="units-title">Mass (kilograms/Pounds)</h3>
+                    <p id="mass-p" class="units-p"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

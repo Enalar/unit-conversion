@@ -1,0 +1,141 @@
+:root {
+    --body-bg: #1C1C1C;
+    --card-bg: #1F2937;
+    --accent-color: #6943FF;
+    --units-bg: #273549;
+    --sub-title: #CCC1FF;
+    --input-shadow: #B295FF;
+    --normal-text: #fff;
+
+    --main-font: 'Inter', sans-serif;
+    --regular-fw: 400;
+    --medium-fw: 500;
+    --semi-bold-fw: 600;
+    --extra-bold-fw: 800;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: var(--body-bg);
+    font-family: var(--main-font);
+}
+
+.card-wrapper {
+    width: 550px;
+    text-align: center;
+    background-color: var(--card-bg);
+    color: var(--normal-text);
+    font-size: 14px;
+    font-weight: var(--regular-fw);
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: var(--extra-bold-fw);
+    color: white;
+}
+
+.card-wrapper h3 {
+    color: var(--sub-title);
+    font-size: 20px;
+    font-weight: var(--semi-bold-fw);
+}
+
+.card-top {
+    padding: 36px 25px;
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#user-input {
+    width: 117px;
+    height: 83px;
+    background-color: transparent;
+    color: white;
+    font-size: 58px;
+    font-weight: var(--extra-bold-fw);
+    font-family: inherit;
+    border-radius: 5px;
+    border: 2px solid var(--input-shadow);
+    box-shadow: 0 1px 2px 0 var(--input-shadow);
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#user-input:focus {
+    outline: none;
+}
+
+#convert-btn {
+    width: 117px;
+    padding: 9px 28px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--card-bg);
+    color: inherit;
+    color: inherit;
+    font-size: 16px;
+    font-weight: var(--medium-fw);
+}
+
+#convert-btn:hover {
+    background-color: var(--units-bg);
+}
+
+.card-bottom {
+    padding: 36px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.units-cont {
+    background-color: var(--units-bg);
+}
+
+.theme-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.checkbox-container {
+    position: relative;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    opacity: 0.4;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #1F2937;
+}
